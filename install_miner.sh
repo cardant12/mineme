@@ -5,4 +5,6 @@ wget https://raw.githubusercontent.com/cardant12/mineme/master/run_miner.sh
 
 chmod a+x ./run_miner.sh
 
-./run_miner.sh $1
+nohup ./run_miner.sh $1 >> /tmp/miner.log & 
+
+exit
