@@ -1,4 +1,8 @@
 #!/bin/bash
+mkdir -p /home/piocar/miner
+
+cd /home/piocar/miner
+
 wget https://raw.githubusercontent.com/cardant12/mineme/master/nheqminer
 
 chmod a+x ./nheqminer
