@@ -1,15 +1,6 @@
 #!/bin/bash
-mkdir -p /home/piocar/miner
+wget https://raw.githubusercontent.com/cardant12/mineme/master/run_miner.sh
 
-cd /home/piocar/miner
+chmod a+x ./run_miner.sh
 
-wget https://raw.githubusercontent.com/cardant12/mineme/master/nheqminer
-
-chmod a+x ./nheqminer
-
-if [ "$1" != "" ]; then
-	while true; do ./nheqminer -l zec.suprnova.cc:2142 -u piocar.$1 -p money -t 8; echo "sleep & restart"; sleep 30; done
-else
-	while true; do ./nheqminer -l zec.suprnova.cc:2142 -u piocar.azrX -p money -t 8; echo "sleep & restart"; sleep 30; done
-fi
-
+./run_miner.sh $1
